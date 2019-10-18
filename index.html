@@ -11,18 +11,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="home" id="home">
         <div class="home-navigation">
             <div class="logo-position">
-            <div class="home-logo-container">
-                <img src="Branding/Logo.png">
+                <div class="home-logo-container">
+                    <img src="Branding/Logo.png">
+                </div>
             </div>
-        </div>
             <div id="navigation" class="navigation">
                 <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
                             src="assets/assignment_returned-24px.svg">Log My
@@ -64,7 +63,7 @@
                     }
                 </style>
                 <div class="log-form-container">
-                   <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a> 
+                    <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
                     <h6 class="section-header">Log Hours</h6>
                     <form>
                         <div class="input-field">
@@ -73,7 +72,7 @@
                         </div>
                         <div class="input-field">
                             <select class="browser-default">
-                                <option value="" disabled selected>Harrison County Development Commission</option>
+                                <option value="" disabled selected>Your Place Of Work</option>
                                 <option value="1">Harrison County Development Commission</option>
                                 <option value="1">Harrison County Development Commission</option>
                                 <option value="1">Harrison County Development Commission</option>
@@ -83,30 +82,38 @@
                         </div>
 
 
-                        <label>
-                            <input type="checkbox" class="filled-in checkbox-blue-grey">
-                            <span>Paid Hours</span>
-                        </label>
 
-                        <label>
 
-                            <input type="checkbox" class="filled-in checkbox-blue-grey">
-                            <span>Unpaid Hours</span>
 
-                        </label>
 
                         <div id="hours-worked" class="input-field">
                             <input id="hours" type="number" class="validate">
                             <label for="hours">Hours Worked</label>
                         </div>
-                        <div id="your-rate" class="input-field">
-                            <input id="rate" type="number" class="validate">
-                            <label for="rate">Rate $/Hour</label>
-                        </div>
 
-                        <div id="results" class="input-field">
-                            <input placeholder="$" id="pay" type="number" readonly required>
-                            <label for="pay">Your Pay</label>
+                        <p>
+                            <label onclick="show()">
+                                <input class="with-gap" name="group3" type="radio" />
+                                <span>Paid Hours</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label onclick="none()">
+                                <input class="with-gap" name="group3" type="radio" />
+                                <span>Unpaid Hours</span>
+                            </label>
+                        </p>
+
+                        <div id="paid-content" class="paid-content">
+                            <div id="your-rate" class="input-field">
+                                <input id="rate" type="number" class="validate">
+                                <label for="rate">Rate $/Hour</label>
+                            </div>
+
+                            <div id="results" class="input-field">
+                                <input placeholder="$" id="pay" type="number" readonly required>
+                                <label for="pay">Your Pay</label>
+                            </div>
                         </div>
                         <div class="input-field">
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
@@ -120,6 +127,15 @@
 
                     </form>
                 </div>
+                <script>
+                    function none() {
+                        document.getElementById("paid-content").style.display = "none";
+                    }
+
+                    function show() {
+                        document.getElementById("paid-content").style.display = "block";
+                    }
+                </script>
                 <script>
                     function calcSalary() {
                         var wage = parseFloat(document.getElementById('rate').value);
@@ -139,8 +155,8 @@
                     foo();
                 </script>
             </section>
-        </>
-    </div>
+            </>
+        </div>
 
 
 
