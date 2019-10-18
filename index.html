@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vivify.min.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <div class="home-navigation">
             <div class="logo-position">
                 <div class="home-logo-container">
-                    <img src="Branding/Logo.png">
+                    <img src="Branding/Logo.svg">
                 </div>
             </div>
             <div id="navigation" class="navigation">
@@ -70,17 +71,20 @@
                             <input id="name" type="text" class="validate" autofocus>
                             <label for="name">First & Last Name</label>
                         </div>
-                        <div class="input-field">
-                            <select class="browser-default">
-                                <option value="" disabled selected>Your Place Of Work</option>
-                                <option value="1">Harrison County Development Commission</option>
-                                <option value="1">Harrison County Development Commission</option>
-                                <option value="1">Harrison County Development Commission</option>
-                                <option value="1">Harrison County Development Commission</option>
-                            </select>
+                        <div class="input-field" >
+                            <select>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>
 
                         </div>
-
+<script>   
+$(document).ready(function() {
+    $('select').material_select();
+  });</script>
+                     
 
 
 
@@ -115,7 +119,7 @@
                                 <label for="pay">Your Pay (No Tax)</label>
                             </div>
                         </div>
-                        <div class="unpaid-content" id="unpaid-content">
+                        <div class="unpaid-content vivify fadeInLeft duration-200" id="unpaid-content" >
                                 <div class="card-panel teal" style="background-color: #012395 !important;">
                                         <span class="white-text">Your hours today could be used as community service hours. Contact Dr.Thomas Wallace at thomas.wallace@gulfportschools.org for more information.
                                         </span>
@@ -131,7 +135,7 @@
                             <input id="number" type="number" class="validate">
                             <label for="number">Lunch Number</label>
                         </div>
-<div class="form-btn-container"><button type="submit" class="btn blue darken-4">Submit</button></div>
+<div class="form-btn-container"><button type="submit" class="btn blue darken-4" style="background-color: #012395 !important;">Submit</button></div>
                     </form>
                 </div>
                 <script>
@@ -164,7 +168,7 @@
                     foo();
                 </script>
             </section>
-            </>
+         
         </div>
 
 
