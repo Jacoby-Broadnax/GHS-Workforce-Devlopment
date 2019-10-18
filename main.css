@@ -112,12 +112,18 @@ a {
     color: #012395 !important;
 }
 
+ul.dropdown-content.select-dropdown li span {
+    color: #012395; 
+}
+
 .form-btn-container {margin:auto; width: 90px;;;}
 
 input:focus {
     outline: none;
     ;
 }
+
+select > option {color: #012395 !important;}
 
 /* label underline focus color */
 .input-field input[type=text]:focus {

@@ -71,20 +71,28 @@
                             <input id="name" type="text" class="validate" autofocus>
                             <label for="name">First & Last Name</label>
                         </div>
-                        <div class="input-field" >
-                            <select>
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                              </select>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                            var elems = document.querySelectorAll('select');
+                            var instances = M.FormSelect.init(elems, options);
+                          });</script>                    
+  <div class="input-field col s12"  >
+    <select>
+      <option value="" disabled selected>Select A Business</option>
+      <option value="1">Harrison County Development Commission</option>
+      <option value="2">Ingalls Ship Building</option>
+      <option value="3">Other</option>
+      
+    </select>
+    <label>Your Place Of Work</label>
+  </div>
 
-                        </div>
-<script>   
-$(document).ready(function() {
-    $('select').material_select();
-  });</script>
-                     
+         <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+         </script>            
 
 
 
