@@ -21,124 +21,123 @@
             </div>
 
             <div id="navigation" class="navigation">
-                <button class="waves-effect waves-dark white"><img src="assets/assignment_returned-24px.svg">Log My
-                    Hours</button>
+                <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
+                            src="assets/assignment_returned-24px.svg">Log My
+                        Hours</button></a>
+                        <a href="">
                 <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
-                    Hours</button>
+                    Hours</button></a>
+                    <a href="">
                 <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Report An
-                    Issue</button>
+                    Issue</button></a>
             </div>
 
             <section class="log-hours" id="log-hours">
-                    <style>
-                        /* label focus color */
-                        .input-field input[type=text]:focus+label {
-                            color: #012395 !important;
-                        }
-            
-            
-            
-                        /* label underline focus color */
-                        .input-field input[type=text]:focus {
-                            border-bottom: 1px solid #012395 !important;
-                            box-shadow: 0 1px 0 0 !important;
-                        }
-            
-                        .input-field input[type=number]:focus+label {
-                            color: #012395 !important;
-                        }
-            
-            
-            
-                        /* label underline focus color */
-                        .input-field input[type=number]:focus {
-                            border-bottom: 1px solid #012395 !important;
-                            box-shadow: 0 1px 0 0 !important;
-                        }
-            
-            
-            
-            
-                    </style>
-                    <div class="log-form-container">
-                          
-                        <form>
-                            <div class="input-field">
-                                <input id="name" type="text" class="validate">
-                                <label for="name">First & Last Name</label>
-                            </div>
-                            <div class="input-field">
-                                <select class="browser-default">
-                                    <option value="" disabled selected>Harrison County Development Commission</option>
-                                    <option value="1">Harrison County Development Commission</option>
-                                    <option value="1">Harrison County Development Commission</option>
-                                    <option value="1">Harrison County Development Commission</option>
-                                    <option value="1">Harrison County Development Commission</option>
-                                </select>
-            
-                            </div>
-            
-            
-                            <label>
-                                <input type="checkbox" class="filled-in checkbox-blue-grey">
-                                <span>Paid Hours</span>
-                            </label>
-                       
-                                <label>
-            
-                                    <input type="checkbox" class="filled-in checkbox-blue-grey">
-                                    <span>Unpaid Hours</span>
-            
-                                </label>
-                            
-                            <div id="hours-worked" class="input-field">
-                                <input id="hours" type="number" class="validate">
-                                <label for="hours">Hours Worked</label>
-                            </div>
-                            <div id="your-rate" class="input-field">
-                                <input id="rate" type="number" class="validate">
-                                <label for="rate">Rate $/Hour</label>
-                            </div>
-            
-                            <div id="results" class="input-field">
-                                <input placeholder="$" id="pay" type="number"  readonly required>
-                                <label for="pay">Your Pay</label>
-                            </div>
-                            <div class="input-field">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Daily Productivity</label>
-                            </div>
-            
-                            <div id="lunch-number" class="input-field">
-                                <input id="number" type="number" class="validate">
-                                <label for="number">Lunch Number</label>
-                            </div>
-            
-                        </form>
-                    </div>
-                    <script>
-                        function calcSalary() {
-                            var wage = parseFloat(document.getElementById('rate').value);
-                            var hours = parseFloat(document.getElementById('hours').value);
-                            var calculate = wage * hours;
-            
-                            document.getElementById('pay').value = calculate;
-                        }
-            
-                        function foo() {
-            
-                            calcSalary()
-            
-                            setTimeout(foo, 100);
-                        }
-            
-                        foo();
-                    </script>
-                </section>
+                <style>
+                    /* label focus color */
+                    .input-field input[type=text]:focus+label {
+                        color: #012395 !important;
+                    }
+
+
+
+                    /* label underline focus color */
+                    .input-field input[type=text]:focus {
+                        border-bottom: 1px solid #012395 !important;
+                        box-shadow: 0 1px 0 0 !important;
+                    }
+
+                    .input-field input[type=number]:focus+label {
+                        color: #012395 !important;
+                    }
+
+
+
+                    /* label underline focus color */
+                    .input-field input[type=number]:focus {
+                        border-bottom: 1px solid #012395 !important;
+                        box-shadow: 0 1px 0 0 !important;
+                    }
+                </style>
+                <div class="log-form-container">
+
+                    <form>
+                        <div class="input-field">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">First & Last Name</label>
+                        </div>
+                        <div class="input-field">
+                            <select class="browser-default">
+                                <option value="" disabled selected>Harrison County Development Commission</option>
+                                <option value="1">Harrison County Development Commission</option>
+                                <option value="1">Harrison County Development Commission</option>
+                                <option value="1">Harrison County Development Commission</option>
+                                <option value="1">Harrison County Development Commission</option>
+                            </select>
+
+                        </div>
+
+
+                        <label>
+                            <input type="checkbox" class="filled-in checkbox-blue-grey">
+                            <span>Paid Hours</span>
+                        </label>
+
+                        <label>
+
+                            <input type="checkbox" class="filled-in checkbox-blue-grey">
+                            <span>Unpaid Hours</span>
+
+                        </label>
+
+                        <div id="hours-worked" class="input-field">
+                            <input id="hours" type="number" class="validate">
+                            <label for="hours">Hours Worked</label>
+                        </div>
+                        <div id="your-rate" class="input-field">
+                            <input id="rate" type="number" class="validate">
+                            <label for="rate">Rate $/Hour</label>
+                        </div>
+
+                        <div id="results" class="input-field">
+                            <input placeholder="$" id="pay" type="number" readonly required>
+                            <label for="pay">Your Pay</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Daily Productivity</label>
+                        </div>
+
+                        <div id="lunch-number" class="input-field">
+                            <input id="number" type="number" class="validate">
+                            <label for="number">Lunch Number</label>
+                        </div>
+
+                    </form>
+                </div>
+                <script>
+                    function calcSalary() {
+                        var wage = parseFloat(document.getElementById('rate').value);
+                        var hours = parseFloat(document.getElementById('hours').value);
+                        var calculate = wage * hours;
+
+                        document.getElementById('pay').value = calculate;
+                    }
+
+                    function foo() {
+
+                        calcSalary()
+
+                        setTimeout(foo, 100);
+                    }
+
+                    foo();
+                </script>
+            </section>
         </div>
     </div>
 
-   
+
 
 </body>
 
