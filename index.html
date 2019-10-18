@@ -115,6 +115,13 @@
                                 <label for="pay">Your Pay (No Tax)</label>
                             </div>
                         </div>
+                        <div class="unpaid-content" id="unpaid-content">
+                                <div class="card-panel teal" style="background-color: #012395 !important;">
+                                        <span class="white-text">Your hours today could be used as community service hours. Contact Dr.Thomas Wallace at thomas.wallace@gulfportschools.org for more information.
+                                        </span>
+
+                        </div>
+                        </div>
                         <div class="input-field">
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Daily Productivity</label>
@@ -130,10 +137,12 @@
                 <script>
                     function none() {
                         document.getElementById("paid-content").style.display = "none";
+                        document.getElementById("unpaid-content").style.display = "block";
                     }
 
                     function show() {
                         document.getElementById("paid-content").style.display = "block";
+                        document.getElementById("unpaid-content").style.display = "none";
                     }
                 </script>
                 <script>
