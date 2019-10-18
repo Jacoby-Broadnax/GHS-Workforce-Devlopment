@@ -79,8 +79,9 @@ a {
 #log-hours {
     display: none;
     background-color: white;
-    margin-top: -230px;z-index: 15;position: relative;;
+   z-index: 15;position: relative;;
     margin-bottom: 20vh;
+   
 }
 
 #log-hours:target {
@@ -127,7 +128,7 @@ input.focus[type=checkbox] {
 .log-form-container {
     margin: auto;
     width: 94%;
- 
+ padding-top: 70px;;
 }
 
 .log-form-container > form {
