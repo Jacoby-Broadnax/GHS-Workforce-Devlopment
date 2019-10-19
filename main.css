@@ -123,6 +123,10 @@ input:focus {
     ;
 }
 
+.log-hours > iframe {
+    width: 100%; height: 100%; border: none;height: 70vh;;;;
+}
+
 select > option {color: #012395 !important;}
 
 /* label underline focus color */
