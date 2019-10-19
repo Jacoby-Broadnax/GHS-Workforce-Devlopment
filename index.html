@@ -13,11 +13,42 @@
     <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="vivify.min.css">
-    <script src="jquery.firstVisitPopup.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://api.sheety.co/d69fbd6d-08b6-4697-9a98-fc5bcb8116aa', function (data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data))
+            })
+        })
+    </script>
+    <script id="item-template" type="text/x-handlebars-template">
+
+        {{#each this}}
+    <li>
+        <a href="">
+<div class="data-items">
+    <span style="display:none">{{lunchNumber}}</span>
+    <details>
+        <summary>{{timestamp}}   
+           <br> 
+            ${{paid}}
+                <br>
+        {{hoursWorked}}Hours</summary>
+      
+    </details>
+</div>
+    </a>
+</li>
+            {{/each}}
+        
+        </script>
 </head>
 
 <body>
-    <div id="my-welcome-message">
+
 
 
     <div class="home" id="home">
@@ -48,6 +79,43 @@
                     src="https://ghsworkforcedev.netlify.com/formlog.html"></iframe>
             </section>
 
+            <div class="view-hours">
+
+                <div class="search-wrapper">
+                    <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
+                            type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
+                            title="Click To Search For Jobs" oninvalid="" required><button onclick="search()"
+                            class="confirm-button" type="submit">Verify</button>
+                    </div>
+
+                </div>
+
+                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list animated slideInUp faster "
+                    style="list-style-type: none;text-decoration: none;">
+
+
+
+                    <div id="items" style="transform: rotateZ(180deg);"></div>
+                </ul>
+                <script>
+                    function myFunction() {
+                        var e, s, t;
+                        for (e = document.getElementById("mySearch").value.toUpperCase(), s = document.getElementById(
+                                "myMenu").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
+                            .getElementsByTagName("a")[0].innerHTML.toUpperCase().indexOf(e) ? s[t].style.display =
+                            "block" : s[t].style.display = "none"
+                    }
+                </script>
+
+                <script>
+                    function search() {
+                        document.getElementsByClassName("result-list")[0].style.display = "block";
+
+                        document.getElementsByClassName("search-wrapper")[0].style.display = "none";
+                    }
+                </script>
+
+            </div>
         </div>
 
 
