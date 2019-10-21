@@ -36,7 +36,7 @@
            <br> 
             ${{paid}}
                 <br>
-        {{hoursWorked}}Hours</summary>
+        {{hoursWorked}} Hours</summary>
       
         {{productivity}}
     </details>
@@ -63,7 +63,7 @@
                 <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
                             src="assets/assignment_returned-24px.svg">Log My
                         Hours</button></a>
-                <a href="">
+                <a href="#view-hours">
                     <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
                         Hours</button></a>
                 <a href="">
@@ -80,12 +80,15 @@
                     src="https://ghsworkforcedev.netlify.com/formlog.html"></iframe>
             </section>
 
-            <div class="view-hours">
+            <div id="view-hours" class="view-hours">
 
-                <div class="search-wrapper">
+                    <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+                    <h6 class="section-header">View Hours</h6>
+
+                <div class="search-wrapper vivify fadeIn duration-500">
                     <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
                             type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                            title="Click To Search For Jobs" oninvalid="" required><button onclick="search()"
+                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect" onclick="search()"
                             class="confirm-button" type="submit">Verify</button>
                     </div>
 
