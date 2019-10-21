@@ -28,15 +28,18 @@
 
         {{#each this}}
     <li>
-        <a href="">
+        <a href="" >
 <div class="data-items">
     <span style="display:none">{{lunchNumber}}</span>
-    <details>
-        <summary>{{timestamp}}   
+    <details >
+        <summary class="waves-effect" style="width: 100%;border-radius: 5px;"><span>{{timestamp}} </span>
+
+            <br>
+                <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
            <br> 
-            ${{paid}}
+            <span>${{paid}}</span>
                 <br>
-        {{hoursWorked}} Hours</summary>
+        </summary>
       
         {{productivity}}
     </details>
@@ -94,7 +97,7 @@
 
                 </div>
 
-                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list animated slideInUp faster "
+                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list vivify fadeIn"
                     style="list-style-type: none;text-decoration: none;">
 
 
