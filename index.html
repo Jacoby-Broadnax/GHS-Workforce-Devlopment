@@ -25,14 +25,16 @@
         })
     </script>
     <script id="item-template" type="text/x-handlebars-template">
-
+<style>
+    .waves-effect {border-radius: 5px; !important;}
+    </style>
         {{#each this}}
     <li>
         <a href="" >
 <div class="data-items">
     <span style="display:none">{{lunchNumber}}</span>
-    <details >
-        <summary class="waves-effect" style="width: 100%;border-radius: 5px;"><span>{{timestamp}} </span>
+    <details style="border-radius: 5px;">
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{timestamp}} </span>
 
             <br>
                 <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
