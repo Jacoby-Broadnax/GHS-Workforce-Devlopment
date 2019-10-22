@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -131,4 +132,138 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GHS Workforce Development</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vivify.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://api.sheety.co/d69fbd6d-08b6-4697-9a98-fc5bcb8116aa', function (data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data))
+            })
+        })
+    </script>
+    <script id="item-template" type="text/x-handlebars-template">
+<style>
+    .waves-effect {border-radius: 5px; !important;}
+    </style>
+        {{#each this}}
+    <li>
+        <a href="" >
+<div class="data-items">
+    <span style="display:none">{{lunchNumber}}</span>
+    <details style="border-radius: 5px;">
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{timestamp}} </span>
+
+            <br>
+                <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
+           <br> 
+            <span>${{paid}}</span>
+                <br>
+        </summary>
+      
+        {{productivity}}
+    </details>
+</div>
+    </a>
+</li>
+            {{/each}}
+        
+        </script>
+</head>
+
+<body>
+
+
+
+    <div class="home" id="home">
+        <div class="home-navigation">
+            <div class="logo-position">
+                <div class="home-logo-container">
+                    <img src="Branding/Logo.svg">
+                </div>
+            </div>
+            <div id="navigation" class="navigation">
+                <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
+                            src="assets/assignment_returned-24px.svg">Log My
+                        Hours</button></a>
+                <a href="#view-hours">
+                    <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
+                        Hours</button></a>
+                <a href="">
+                    <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Report
+                        An
+                        Issue</button></a>
+            </div>
+
+            <section class="log-hours" id="log-hours">
+
+                <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+                <h6 class="section-header">Log Hours</h6>
+                <iframe class="vivify fadeIn duration-500"
+                    src="https://ghsworkforcedev.netlify.com/formlog.html"></iframe>
+            </section>
+
+            <div id="view-hours" class="view-hours">
+
+                    <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+                    <h6 class="section-header">View Hours</h6>
+
+                <div class="search-wrapper vivify fadeIn duration-500">
+                    <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
+                            type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
+                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect" onclick="search()"
+                            class="confirm-button" type="submit">Verify</button>
+                    </div>
+
+                </div>
+
+                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list vivify fadeIn"
+                    style="list-style-type: none;text-decoration: none;">
+
+
+
+                    <div id="items" style="transform: rotateZ(180deg);"></div>
+                </ul>
+                <script>
+                    function myFunction() {
+                        var e, s, t;
+                        for (e = document.getElementById("mySearch").value.toUpperCase(), s = document.getElementById(
+                                "myMenu").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
+                            .getElementsByTagName("a")[0].innerHTML.toUpperCase().indexOf(e) ? s[t].style.display =
+                            "block" : s[t].style.display = "none"
+                    }
+                </script>
+
+                <script>
+                    function search() {
+                        document.getElementsByClassName("result-list")[0].style.display = "block";
+                        document.getElementsByClassName("search-wrapper")[0].style.display = "none";
+                    }
+                </script>
+
+            </div>
+        </div>
+
+
+
+</body>
+
+>>>>>>> 65f643912d1c349de7d9fee78ab0468719ad9b04
 </html>
