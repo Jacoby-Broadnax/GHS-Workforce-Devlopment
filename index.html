@@ -25,18 +25,23 @@
         })
     </script>
     <script id="item-template" type="text/x-handlebars-template">
-
+        <style>
+    .waves-effect {border-radius: 5px; !important;}
+    </style>
         {{#each this}}
     <li>
-        <a href="">
+        <a href="" >
 <div class="data-items">
     <span style="display:none">{{lunchNumber}}</span>
-    <details>
-        <summary>{{timestamp}}   
+    <details style="border-radius: 5px;">
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{timestamp}} </span>
+
+            <br>
+                <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
            <br> 
-            ${{paid}}
+            <span>${{paid}}</span>
                 <br>
-        {{hoursWorked}}Hours</summary>
+        </summary>
       
         {{productivity}}
     </details>
@@ -48,10 +53,15 @@
         </script>
 </head>
 
-<body>
+<body class="vivify fadeIn delay-500">
 
-
-
+    <a style="position: fixed; bottom:10px; left:10px;" href="https://gulfporthighschoolapp.netlify.com/homescreen#homescreen" target="_blank">
+        <button class="btn-flat " style="margin-top: 10px;;">
+            <i class="material-icons left" style="font-size: 25px;;">
+                arrow_back</i>
+            Return To GHS App
+        </button>
+    </a>
     <div class="home" id="home">
         <div class="home-navigation">
             <div class="logo-position">
@@ -61,15 +71,11 @@
             </div>
             <div id="navigation" class="navigation">
                 <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
-                            src="assets/assignment_returned-24px.svg">Log My
-                        Hours</button></a>
+                            src="assets/assignment_returned-24px.svg">LOG MY HOURS</button></a>
+                <a href="#view-hours">
+                    <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">VIEW MY HOURS</button></a>
                 <a href="">
-                    <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
-                        Hours</button></a>
-                <a href="">
-                    <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Report
-                        An
-                        Issue</button></a>
+                    <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">REPORT AN ISSUE</button></a>
             </div>
 
             <section class="log-hours" id="log-hours">
@@ -80,18 +86,21 @@
                     src="https://ghsworkforcedev.netlify.com/formlog.html"></iframe>
             </section>
 
-            <div class="view-hours">
+            <div id="view-hours" class="view-hours">
 
-                <div class="search-wrapper">
+                <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+                <h6 class="section-header">View Hours</h6>
+
+                <div class="search-wrapper vivify fadeIn duration-500">
                     <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
                             type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                            title="Click To Search For Jobs" oninvalid="" required><button onclick="search()"
-                            class="confirm-button" type="submit">Verify</button>
+                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect"
+                            onclick="search()" class="confirm-button" type="submit">Verify</button>
                     </div>
 
                 </div>
 
-                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list animated slideInUp faster "
+                <ul style="transform: rotateZ(180deg);" id="myMenu" class="result-list vivify fadeIn"
                     style="list-style-type: none;text-decoration: none;">
 
 
