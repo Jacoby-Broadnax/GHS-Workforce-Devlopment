@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +25,7 @@
         })
     </script>
     <script id="item-template" type="text/x-handlebars-template">
-<style>
+        <style>
     .waves-effect {border-radius: 5px; !important;}
     </style>
         {{#each this}}
@@ -56,7 +55,11 @@
 
 <body>
 
-
+    <div class="return" style="margin-top: 10px;">
+        <a href="https://gulfporthighschoolapp.netlify.com/homescreen#homescreen"><button class="btn-flat"><i
+                    class="material-icons left">
+                    arrow_back</i>Return To GHS App</button></a>
+    </div>
 
     <div class="home" id="home">
         <div class="home-navigation">
@@ -88,14 +91,14 @@
 
             <div id="view-hours" class="view-hours">
 
-                    <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
-                    <h6 class="section-header">View Hours</h6>
+                <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+                <h6 class="section-header">View Hours</h6>
 
                 <div class="search-wrapper vivify fadeIn duration-500">
                     <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
                             type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect" onclick="search()"
-                            class="confirm-button" type="submit">Verify</button>
+                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect"
+                            onclick="search()" class="confirm-button" type="submit">Verify</button>
                     </div>
 
                 </div>
