@@ -119,7 +119,7 @@ background-clip: ;
 
 .datepicker-date-display {background-color: #012395 !important;;}
 
-.datepicker-table td.is-today {color: #012395 !important; }
+.datepicker-table td.is-today {color: white !important; }
 
 .datepicker-table td.is-selected {background-color:#012395 !important;}
 
