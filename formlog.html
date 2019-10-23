@@ -134,7 +134,19 @@
                             <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Daily Productivity</label>
                         </div>
-
+                        <div class="input-field">
+<input type="text" class="datepicker">
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+    $('.modal').modal();
+    //this are my init
+    $('.datepicker').datepicker();
+});
+</script>
                         <div id="lunch-number" class="input-field">
                             <input name="entry.1866640669" id="number" type="number" class="validate">
                             <label for="number">Lunch Number</label>
