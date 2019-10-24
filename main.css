@@ -90,6 +90,26 @@ background-clip: ;
     ;
 }
 
+.refresh-btn { 
+        color: black;
+        padding: 10px;
+        position: fixed;
+ 
+    right: 0px;;
+    top: 6px;;
+    z-index:350;
+
+}
+
+#up {transition: 0.2s ease;}
+
+#up.scrolled {    padding: 10px;
+    background-color: white;
+    border: solid;
+    border-width: 1.3px; 
+    border-color:lightgray; border-radius: 50px;
+margin-right: 6px;}
+
 #view-hours {
     display: none;
 }
