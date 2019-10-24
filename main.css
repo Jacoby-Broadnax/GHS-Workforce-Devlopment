@@ -90,15 +90,17 @@ background-clip: ;
     ;
 }
 
+#items {transform: rotateZ(180deg);;}
+
 .refresh-btn { 
         color: black;
         padding: 10px;
         position: fixed;
  
     right: 0px;;
-    top: 6px;;
+    top: 0px;;
     z-index:350;
-
+    border-radius: 50px;
 }
 
 #up {transition: 0.2s ease;}
@@ -107,7 +109,7 @@ background-clip: ;
     background-color: white;
     border: solid;
     border-width: 1.3px; 
-    border-color:lightgray; border-radius: 50px;
+    border-color:lightgray; 
 margin-right: 6px;}
 
 #view-hours {
@@ -288,7 +290,7 @@ textarea.materialize-textarea.valid:focus,
 
 #items {margin: auto; width:94%;}
 
-.data-items {border: solid;border-color: lightgray;border-width: 1.3px; border-radius: 10px;padding: 5px;margin-top: 10px;color: black}
+.data-items {border: solid;border-color: lightgray;border-width: 1.3px; border-radius: 10px;padding: 5px;margin-top: 10px;color: black;transform: rotateZ(180deg);}
 
 .view-hours {position: absolute; left: 0px; top: 0px; background-color: white; width: 100%; height: 100%; z-index: 150;}
 
