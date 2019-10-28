@@ -74,6 +74,12 @@ background-clip: ;
 }
 
 /*--------------------------Sections--------------------------------*/
+#feedback {position: absolute;top: 0px;width: 100%; height: 100%;background-color: white;z-index: 150;display: none;;}
+
+#feedback:target {display: block;}
+
+#feedback > iframe {;;;}
+
 .section-header {
     font-weight: bold;
     text-align: center;
