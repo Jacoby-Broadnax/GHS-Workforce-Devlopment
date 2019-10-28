@@ -18,7 +18,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON('https://api.sheety.co/d69fbd6d-08b6-4697-9a98-fc5bcb8116aa', function (data) {
+            $.getJSON('https://api.sheety.co/017e7e8a-2372-4ea6-b302-a859fcc49d8f', function (data) {
                 var template = Handlebars.compile($('#item-template').html())
                 $('#items').html(template(data))
             })
@@ -34,7 +34,7 @@
 <div class="data-items">
     <span style="display:none">{{lunchNumber}}</span>
     <details style="border-radius: 5px;">
-        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{timestamp}} </span>
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{date}} </span>
 
             <br>
                 <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
