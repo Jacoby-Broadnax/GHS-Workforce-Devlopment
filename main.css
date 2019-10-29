@@ -391,7 +391,7 @@ textarea.materialize-textarea.valid:focus,
     border: solid;
     border-color: lightgray;
     border-width: 1.3px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     margin-top: 10px;
     color: black;
@@ -413,6 +413,6 @@ textarea.materialize-textarea.valid:focus,
     width: 94%
 }
 
->>>>>>>65f643912d1c349de7d9fee78ab0468719ad9b04 summary:focus {
+summary:focus {
     outline: none
 }
