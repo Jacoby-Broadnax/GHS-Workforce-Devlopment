@@ -175,9 +175,9 @@ a {
     ;
 }
 
-.myMenu {display: none;;}
+#myMenu {display: none;}
 
-.myMenu:target {display: block;}
+#myMenu:target {display: block;}
 
 .datepicker-table td.is-today {
     color: white !important;
