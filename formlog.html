@@ -50,111 +50,113 @@
     <div class="log-form-container">
 
         <form
-        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScs4RgNH1a2U4oEOuOjpiI-5SxIj7SXujKg_8ybpMVd0xKGxQ/formResponse">
-        <div class="input-field">
-            <input autofocus name="entry.856417767" id="name" type="text" class="validate" required>
-            <label  for="name">First & Last Name</label>
-        </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('select');
-                var instances = M.FormSelect.init(elems, options);
-            });
-        </script>
-        <div class="input-field col s12">
-            <select name="entry.1840486379" required>
-                <option value="" disabled selected>Select A Business</option>
-                <option value="Harrison County Development Commission">Harrison County Development Commission</option>
-                <option value="Port Of Gulfport">Port Of Gulfport</option>
-                <option value="Ingalls Ship Building">Gulfport School District Technology</option>
-                <option value="Gulfport School District">Ingalls Ship Building</option>
-                <option value="Federal Programs">Federal Programs</option>
-                <option value="Public Relations">Public Relations</option>
-                <option value="Med Tech">Med Tech</option>
-                <option value="Teacher Academy">Teacher Academy</option>
-                <option value="Law & Public Safety">Law & Public Safety</option>
-                <option value="Digital Media">Digital Media</option>
-                <option value="WGTV Broadcasting">WGTV Broadcasting</option>
-                <option value="Culinary">Culinary</option>
-            </select>
-            <label>Your Place Of Work</label>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('select');
-                var instances = M.FormSelect.init(elems);
-            });
-        </script>
-
-
-
-
-
-        <div id="hours-worked" class="input-field">
-            <input pattern="^\d+(?:\.\d{1,2})?$" name="entry.2110425346" id="hours" type="number"
-                min="0" step="0.01"  class="validate">
-            <label for="hours">Hours Worked</label>
-        </div>
-
-        <p>
-            <label onclick="show()">
-                <input name="group3" class="with-gap"  type="radio" />
-                <span>Paid Hours</span>
-            </label>
-        </p>
-        <p>
-            <label onclick="none()">
-                <input name="group3" class="with-gap"  type="radio" />
-                <span>Unpaid Hours</span>
-            </label>
-        </p>
-
-        <div id="paid-content" class="paid-content">
-            <div id="your-rate" class="input-field">
-                <input name="entry.518165668" min="0" step="0.01" id="rate" type="number" class="validate">
-                <label for="rate">Rate $/Hour</label>
+            action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScs4RgNH1a2U4oEOuOjpiI-5SxIj7SXujKg_8ybpMVd0xKGxQ/formResponse">
+            <div class="input-field">
+                <input autofocus name="entry.856417767" id="name" type="text" class="validate" required>
+                <label for="name">First & Last Name</label>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('select');
+                    var instances = M.FormSelect.init(elems, options);
+                });
+            </script>
+            <div class="input-field col s12">
+                <select name="entry.1840486379" required>
+                    <option value="" disabled selected>Select A Business</option>
+                    <option value="Harrison County Development Commission">Harrison County Development Commission
+                    </option>
+                    <option value="Port Of Gulfport">Port Of Gulfport</option>
+                    <option value="Ingalls Ship Building">Gulfport School District Technology</option>
+                    <option value="Gulfport School District">Ingalls Ship Building</option>
+                    <option value="Federal Programs">Federal Programs</option>
+                    <option value="Public Relations">Public Relations</option>
+                    <option value="Med Tech">Med Tech</option>
+                    <option value="Teacher Academy">Teacher Academy</option>
+                    <option value="Law & Public Safety">Law & Public Safety</option>
+                    <option value="Digital Media">Digital Media</option>
+                    <option value="WGTV Broadcasting">WGTV Broadcasting</option>
+                    <option value="Culinary">Culinary</option>
+                </select>
+                <label>Your Place Of Work</label>
             </div>
 
-            <div id="results" class="input-field">
-                <input name="entry.270501526" placeholder="$" id="pay" type="number" readonly required>
-                <label for="pay">Your Pay (No Tax)</label>
-            </div>
-        </div>
-        <div class="unpaid-content vivify fadeInLeft duration-200" id="unpaid-content">
-            <div class="card-panel teal" style="background-color: #012395 !important;">
-                <span class="white-text">Your hours today could be used as community service hours.
-                    Contact Dr.Thomas Wallace at thomas.wallace@gulfportschools.org for more
-                    information.
-                </span>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('select');
+                    var instances = M.FormSelect.init(elems);
+                });
+            </script>
 
-            </div>
-        </div>
-        <div class="input-field">
-            <textarea name="entry.1648798472" id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Daily Productivity</label>
-        </div>
-        <div class="input-field">
-<input type="text" id="date1" class="datepicker">
-<label for="date1">Choose A Date</label>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script>
-$(document).ready(function() {
 
-$('.modal').modal();
-//this are my init
-$('.datepicker').datepicker();
-});
-</script>
-        <div id="lunch-number" class="input-field">
-            <input name="entry.1866640669" id="number" type="number" class="validate">
-            <label for="number">Lunch Number</label>
-        </div>
-        <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
-                style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button></div>
-    </form>
+
+
+
+            <div id="hours-worked" class="input-field">
+                <input pattern="^\d+(?:\.\d{1,2})?$" name="entry.2110425346" id="hours" type="number" min="0"
+                    step="0.01" class="validate">
+                <label for="hours">Hours Worked</label>
+            </div>
+
+            <p>
+                <label onclick="show()">
+                    <input name="group3" class="with-gap" type="radio" />
+                    <span>Paid Hours</span>
+                </label>
+            </p>
+            <p>
+                <label onclick="none()">
+                    <input name="group3" class="with-gap" type="radio" />
+                    <span>Unpaid Hours</span>
+                </label>
+            </p>
+
+            <div id="paid-content" class="paid-content">
+                <div id="your-rate" class="input-field">
+                    <input name="entry.518165668" min="0" step="0.01" id="rate" type="number" class="validate">
+                    <label for="rate">Rate $/Hour</label>
+                </div>
+
+                <div id="results" class="input-field">
+                    <input name="entry.270501526" placeholder="$" id="pay" type="number" readonly required>
+                    <label for="pay">Your Pay (No Tax)</label>
+                </div>
+            </div>
+            <div class="unpaid-content vivify fadeInLeft duration-200" id="unpaid-content">
+                <div class="card-panel teal" style="background-color: #012395 !important;">
+                    <span class="white-text">Your hours today could be used as community service hours.
+                        Contact Dr.Thomas Wallace at thomas.wallace@gulfportschools.org for more
+                        information.
+                    </span>
+
+                </div>
+            </div>
+            <div class="input-field">
+                <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Daily Productivity</label>
+            </div>
+            <div class="input-field">
+                <input name="entry.1648798472" type="text" id="date1" class="datepicker">
+                <label for="date1">Choose A Date</label>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+            <script>
+                $(document).ready(function () {
+
+                    $('.modal').modal();
+                    //this are my init
+                    $('.datepicker').datepicker();
+                });
+            </script>
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="number" type="number" class="validate">
+                <label for="number">Lunch Number</label>
+            </div>
+            <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+                    style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
+            </div>
+        </form>
     </div>
     <script>
         function none() {
