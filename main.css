@@ -175,6 +175,10 @@ a {
     ;
 }
 
+.myMenu {display: none;;}
+
+.myMenu:target {display: block;}
+
 .datepicker-table td.is-today {
     color: white !important;
     ;
@@ -376,10 +380,7 @@ textarea.materialize-textarea.valid:focus,
 
 /*--------------------------------------User Verification------------------------------------*/
 
-.result-list {
-    display: none;
-    ;
-}
+
 
 #items {
     margin: auto;

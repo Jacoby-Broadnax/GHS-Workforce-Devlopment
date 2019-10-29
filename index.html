@@ -55,6 +55,7 @@
 
 <body class="vivify fadeIn delay-400">
 
+    
     <div class="return" style="margin-top: 10px;">
         <a href="https://gulfporthighschoolapp.netlify.com/homescreen#homescreen" target="_blank"><button onclick="load()" class="btn-flat"><i
                     class="material-icons left">
@@ -105,7 +106,7 @@
             <div id="view-hours" class="view-hours">
 
                 <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
-                <a href="https://ghswkdev.netlify.com/#view-hours" class="waves-effect"><i
+                <a href="https://ghswkdev.netlify.com" class="waves-effect"><i
                         class="material-icons refresh-btn" id="up">refresh</i></a>
                 <h6 class="section-header">View Hours</h6>
                 <script>
@@ -118,26 +119,25 @@
                         }
                     });
                 </script>
-                <div class="search-wrapper vivify fadeIn duration-500">
-                    <div class="search-input-container"> <input autocomplete="off" autofocus class="search-input"
-                            type="number" id="mySearch" onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                            title="Click To Search For Jobs" oninvalid="" required><button class="btn-flat waves-effect"
-                            onclick="search()" class="confirm-button" type="submit">Verify</button>
+                <form action="#myMenu" target="_self">
+                    <div class="search-wrapper vivify fadeIn duration-500">
+                        <div class="search-input-container"> <input  autofocus class="search-input"
+                                type="number" id="mySearch"  onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
+                                title="Click To Search For Jobs" min="1000000" required><button class="btn-flat waves-effect"
+                                 class="confirm-button" type="submit">Verify</button>
+                        </div>
+    
                     </div>
-
-                </div>
-
-                <ul id="myMenu" class="result-list vivify fadeIn" style="list-style-type: none;text-decoration: none;">
-
-
-
-                    <div id="items"></div>
-                </ul>
+             
+                    </form>
+              <script>
+              
+              </script>
                 <script>
                     function myFunction() {
                         var e, s, t;
                         for (e = document.getElementById("mySearch").value.toUpperCase(), s = document.getElementById(
-                                "myMenu").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
+                                "items").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
                             .getElementsByTagName("a")[0].innerHTML.toUpperCase().indexOf(e) ? s[t].style.display =
                             "block" : s[t].style.display = "none"
                     }
@@ -151,7 +151,12 @@
                 </script>
 
             </div>
+            <ul id="myMenu" class="result-list vivify fadeIn" style="list-style-type: none;text-decoration: none;">
 
+
+
+                <div id="items"></div>
+            </ul>
             <section id="feedback">
                 <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
 
