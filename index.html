@@ -127,17 +127,22 @@
                         }
                     });
                 </script>
-                <form action="#myMenu" target="_self">
+                
                     <div class="search-wrapper vivify fadeIn duration-500">
                         <div class="search-input-container"> <input  autofocus class="search-input"
-                                type="number" id="mySearch"  onkeyup="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                                title="Click To Search For Jobs" min="1000" max="100000000" required><button class="btn-flat waves-effect"
-                                 class="confirm-button" type="submit">Verify</button>
+                                type="text" id="mySearch" onkeydown="myFunction()" placeholder="&emsp; Enter Lunch Number"
+                                title="Click To Search For Jobs" minlength="5" required><button onclick="search()" class="btn-flat waves-effect confirm-button right vivify fadeInRight"
+                                  type="submit" >Verify</button>
                         </div>
     
                     </div>
              
-                    </form>
+                    <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
+
+                        <div style="margin: auto;;">
+                              
+                                <div style="padding-top: 80px;" id="items"></div>
+                            </ul>
               <script>
               
               </script>
@@ -159,13 +164,7 @@
                 </script>
 
             </div>
-            <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
-
-        <div style="margin: auto; width: 50px;;">
-                <a href="#myMenu" class="waves-effect" ><i class="material-icons back-btn vivify pulsate infinite" style="font-size: 30px;">keyboard_arrow_up</i></a></div>
-                <h6 class="section-header" style="margin-top: 10px;;">My Hours</h6>
-                <div style="padding-top: 80px;" id="items"></div>
-            </ul>
+         
 
 
             <section id="feedback">
