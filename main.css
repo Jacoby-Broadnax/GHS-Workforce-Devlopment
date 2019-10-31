@@ -23,6 +23,8 @@ html {scroll-behavior: smooth;}
     background-clip: ;
 }
 
+.divider {height: 1px; background-color: white;}
+
 .logo-position {
     position: sticky;
     top: 0px;
