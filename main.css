@@ -38,6 +38,16 @@ html {scroll-behavior: smooth;}
     width: 260px;
 }
 
+.iframe-open > iframe {width: 100%;position: fixed; left: 0px ;top: 0px;;height: 100%;;z-index: 150;border: none;}
+
+.close-btn {position: fixed; right: 10px; top: 10px; background-color: transparent;z-index: 160;padding: 10px;border: solid;border-width: 2px;border-color: lightgray;color: white;border-radius: 5px;;}
+
+#popup {display: none;}
+
+#popup:target {display: block;}
+
+
+
 .navigation {
     margin: auto;
     width: 94%;
@@ -52,7 +62,7 @@ html {scroll-behavior: smooth;}
 }
 
 .home-navigation {
-    margin-top: 0px
+    margin-top: 10vh
 }
 
 .navigation>a>button {
@@ -77,9 +87,9 @@ html {scroll-behavior: smooth;}
 }
 
 /*--------------------------Sections--------------------------------*/
-.new {position: fixed; bottom: -5px; ;;}
+.new {margin-top: 15px;margin-bottom: -20px;;}
 
-.new > img {width: 100%;}
+.new > img {width: 100%;border-radius: 7px}
 
 #feedback {
     position: absolute;
