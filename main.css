@@ -40,7 +40,7 @@ html {scroll-behavior: smooth;}
 
 .iframe-open > iframe {width: 100%;position: fixed; left: 0px ;top: 0px;;height: 100%;;z-index: 150;border: none;}
 
-.close-btn {position: fixed; right: 10px; top: 10px; background-color: transparent;z-index: 160;padding: 10px;border: solid;border-width: 2px;border-color: lightgray;color: white;border-radius: 5px;;}
+.close-btn {position: fixed; right: 10px; top: 10px; background-color: transparent;z-index: 160;padding: 10px;border: solid;border-width: 2px;border-color: white;color: white;border-radius: 5px;;}
 
 #popup {display: none;}
 

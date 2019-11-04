@@ -149,29 +149,30 @@
                     <div style="margin: auto;;">
 
                         <div style="padding-top: 80px;" id="items"></div>
+                        <div class="report">
+                            <button onclick="reportissue()" class="btn-flat waves-effect">Report An Issue</button>
+                        </div>
+                        <div class="report-sect vivify fadeIn" style="display: block;" id="report">
+                            <form>
+                                <div class="input-field">
+                                    <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Time ID</label>
+                                </div>
+                                <i class="material-icons"
+                                    style="color: #012395;float: right;margin-top:-60px;margin-right: 10px;">help</i>
+                                <div class="input-field">
+                                    <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Lunch Number</label>
+                                </div>
+                                <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+                                        style="background-color: #012395 !important;"><i
+                                            class="material-icons left">lock</i>Submit</button>
+                                </div>
+                            </form>
+                        </div>
                 </ul>
 
-                <div class="report">
-                    <button onclick="reportissue()" class="btn-flat waves-effect">Report An Issue</button>
-                </div>
-                <div class="report-sect vivify fadeIn" style="display: block;" id="report">
-                    <form>
-                        <div class="input-field">
-                            <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Time ID</label>
-                        </div>
-                        <i class="material-icons"
-                            style="color: #012395;float: right;margin-top:-60px;margin-right: 10px;">help</i>
-                        <div class="input-field">
-                            <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Lunch Number</label>
-                        </div>
-                        <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
-                                style="background-color: #012395 !important;"><i
-                                    class="material-icons left">lock</i>Submit</button>
-                        </div>
-                    </form>
-                </div>
+            
                 <script>
                     function reportissue() {
                         document.getElementsByClassName("report-sect").style.display = "block"
