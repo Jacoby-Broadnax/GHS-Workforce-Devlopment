@@ -52,7 +52,7 @@ html {scroll-behavior: smooth;}
 }
 
 .home-navigation {
-    margin-top: 25vh
+    margin-top: 0px
 }
 
 .navigation>a>button {
@@ -77,6 +77,10 @@ html {scroll-behavior: smooth;}
 }
 
 /*--------------------------Sections--------------------------------*/
+.new {position: fixed; bottom: -5px; ;;}
+
+.new > img {width: 100%;}
+
 #feedback {
     position: absolute;
     top: 0px;
@@ -188,7 +192,7 @@ html {scroll-behavior: smooth;}
     display: block !important;
 }
 
-
+.report-sect {display: none;}
 
 #myMenu {}
 

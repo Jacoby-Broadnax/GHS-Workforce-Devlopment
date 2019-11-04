@@ -15,14 +15,17 @@
     <link rel="stylesheet" href="vivify.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
     </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145321577-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145321577-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-145321577-2');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145321577-2');
+    </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -63,10 +66,10 @@
 
 <body class="vivify fadeIn delay-400">
 
-    
+
     <div class="return" style="margin-top: 10px;">
-        <a href="https://gulfporthighschoolapp.netlify.com/homescreen#homescreen" target="_blank"><button onclick="load()" class="btn-flat"><i
-                    class="material-icons left">
+        <a href="https://gulfporthighschoolapp.netlify.com/homescreen#homescreen" target="_blank"><button
+                onclick="load()" class="btn-flat"><i class="material-icons left">
                     arrow_back</i>Return To GHS App</button></a>
     </div>
     <div class="workforce-dev-loader work">
@@ -75,7 +78,8 @@
             <div class="progress">
                 <div class="indeterminate"></div>
             </div>
-            <p style="text-align: center;" class="vivify fadeIn delay-3000">Loading may take longer than expected due to internet connection speed.</p>
+            <p style="text-align: center;" class="vivify fadeIn delay-3000">Loading may take longer than expected due to
+                internet connection speed.</p>
         </div>
         <p class="branding"><strong>GHS</strong>App</p>
     </div>
@@ -101,8 +105,9 @@
                 <a href="#feedback">
                     <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Give
                         Feedback</button></a>
+               
             </div>
-
+           <a href="https://www.mscoastaljobs.com/"><div class="new"><img src="assets/partnership.svg"></div></a> 
             <section class="log-hours" id="log-hours">
 
                 <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
@@ -114,8 +119,8 @@
             <div id="view-hours" class="view-hours">
 
                 <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
-                <a href="https://ghswkdev.netlify.com" class="waves-effect"><i
-                        class="material-icons refresh-btn" id="up">refresh</i></a>
+                <a href="https://ghswkdev.netlify.com" class="waves-effect"><i class="material-icons refresh-btn"
+                        id="up">refresh</i></a>
                 <h6 class="section-header">View Hours</h6>
                 <script>
                     $(window).scroll(function () {
@@ -127,26 +132,51 @@
                         }
                     });
                 </script>
-                
-                    <div class="search-wrapper vivify fadeIn duration-500">
-                        <div class="search-input-container" style="margin-left: -15px;"> <input style="padding-left: 10px;;" autofocus class="search-input"
-                                type="text" id="mySearch" onkeydown="myFunction()" placeholder="&emsp; Enter Lunch Number"
-                                title="Click To Search For Jobs" minlength="5" required><button onclick="search()" class="btn-flat waves-effect confirm-button right vivify fadeInRight"
-                                  type="submit" >Verify</button>
-                        </div>
-    
-                    </div>
-             
-                    <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
 
-                        <div style="margin: auto;;">
-                              
-                                <div style="padding-top: 80px;" id="items"></div>
-                            </ul>
-              
-                           <div class="report">
-                               <a href="">Report An Error</a>
-                           </div> 
+                <div class="search-wrapper vivify fadeIn duration-500">
+                    <div class="search-input-container" style="margin-left: -15px;"> <input style="padding-left: 10px;;"
+                            autofocus class="search-input" type="text" id="mySearch" onkeydown="myFunction()"
+                            placeholder="&emsp; Enter Lunch Number" title="Click To Search For Jobs" minlength="5"
+                            required><button onclick="search()"
+                            class="btn-flat waves-effect confirm-button right vivify fadeInRight"
+                            type="submit">Verify</button>
+                    </div>
+
+                </div>
+
+                <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
+
+                    <div style="margin: auto;;">
+
+                        <div style="padding-top: 80px;" id="items"></div>
+                </ul>
+
+                <div class="report">
+                    <button onclick="reportissue()" class="btn-flat waves-effect">Report An Issue</button>
+                </div>
+                <div class="report-sect vivify fadeIn" style="display: block;" id="report">
+                    <form>
+                        <div class="input-field">
+                            <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Time ID</label>
+                        </div>
+                        <i class="material-icons"
+                            style="color: #012395;float: right;margin-top:-60px;margin-right: 10px;">help</i>
+                        <div class="input-field">
+                            <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Lunch Number</label>
+                        </div>
+                        <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+                                style="background-color: #012395 !important;"><i
+                                    class="material-icons left">lock</i>Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    function reportissue() {
+                        document.getElementsByClassName("report-sect").style.display = "block"
+                    }
+                </script>
                 <script>
                     function myFunction() {
                         var e, s, t;
@@ -165,7 +195,7 @@
                 </script>
 
             </div>
-         
+
 
 
             <section id="feedback">
