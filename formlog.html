@@ -62,7 +62,7 @@
                 });
             </script>
             <div class="input-field col s12">
-                <select name="entry.1840486379" required>
+                <select class="browser-default" name="entry.1840486379" required>
                     <option value="" disabled selected>Select A Business</option>
                     <option value="Harrison County Development Commission">Harrison County Development Commission
                     </option>
@@ -78,7 +78,6 @@
                     <option value="WGTV Broadcasting">WGTV Broadcasting</option>
                     <option value="Culinary">Culinary</option>
                 </select>
-                <label>Your Place Of Work</label>
             </div>
 
             <script>
@@ -135,20 +134,11 @@
                 <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
                 <label for="textarea1">Daily Productivity</label>
             </div>
-            <div class="input-field">
-                <input name="entry.1648798472" type="text" id="date1" class="datepicker">
-                <label for="date1">Choose A Date</label>
+            <div>
+                <input name="entry.1648798472" type="date" id="date1" class="datepicker">
+              
             </div>
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-            <script>
-                $(document).ready(function () {
-
-                    $('.modal').modal();
-                    //this are my init
-                    $('.datepicker').datepicker();
-                });
-            </script>
+          
             <div id="lunch-number" class="input-field">
                 <input name="entry.1866640669" id="number" type="number" class="validate">
                 <label for="number">Lunch Number</label>
