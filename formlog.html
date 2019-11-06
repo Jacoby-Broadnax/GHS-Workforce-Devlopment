@@ -93,7 +93,7 @@
 
             <div id="hours-worked" class="input-field">
                 <input pattern="^\d+(?:\.\d{1,2})?$" name="entry.2110425346" id="hours" type="number" min="0"
-                    step="0.01" class="validate">
+                    step="0.01" class="validate" required>
                 <label for="hours">Hours Worked</label>
             </div>
 
@@ -117,7 +117,7 @@
                 </div>
 
                 <div id="results" class="input-field">
-                    <input name="entry.270501526" placeholder="$" id="pay" type="number" readonly required>
+                    <input name="entry.270501526" placeholder="$" id="pay" type="number" readonly>
                     <label for="pay">Your Pay (No Tax)</label>
                 </div>
             </div>
@@ -132,15 +132,15 @@
             </div>
             <div class="input-field">
                 <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Daily Productivity</label>
+                <label for="textarea1">Daily Productivity (Optional)</label>
             </div>
-            <div>
-                <input placeholder="Choose A Date" name="entry.1648798472" type="date" id="date1" class="datepicker">
-              
+            <div class="input-field">
+                <input placeholder="Choose A Date" name="entry.1648798472" type="date" id="date1" class="datepicker" required>
+                <label for="number">Choose A Date Below</label>
             </div>
           
             <div id="lunch-number" class="input-field">
-                <input name="entry.1866640669" id="number" type="number" class="validate">
+                <input name="entry.1866640669" id="number" type="number" class="validate" required>
                 <label for="number">Lunch Number</label>
             </div>
             <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
