@@ -62,7 +62,7 @@
                 });
             </script>
             <div class="input-field col s12">
-                <select class="browser-default" name="entry.1840486379" required>
+                <select onchange="other()" class="browser-default" name="entry.1840486379" required>
                     <option value="" disabled selected>Select A Business</option>
                     <option value="Harrison County Development Commission">Harrison County Development Commission
                     </option>
@@ -78,9 +78,19 @@
                     <option value="WGTV Broadcasting">WGTV Broadcasting</option>
                     <option value="Student Ambassador">Student Ambassador</option>
                     <option value="Culinary">Culinary</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
+            <div class="input-field other">
+                <input autofocus name="entry.856417767" id="name" type="text" class="validate">
+                <label for="name">Enter Your Place Of Work Below (If Not Listed Above)</label>
+            </div>
+            <script>
+                function other() {
+                    document.getElementsByClassName("other")[0].style.display = "block"
+                }
+            </script>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var elems = document.querySelectorAll('select');
@@ -136,10 +146,11 @@
                 <label for="textarea1">Daily Productivity (Optional)</label>
             </div>
             <div class="input-field">
-                <input placeholder="Choose A Date" name="entry.1648798472" type="date" id="date1" class="datepicker" required>
+                <input placeholder="Choose A Date" name="entry.1648798472" type="date" id="date1" class="datepicker"
+                    required>
                 <label for="number">Choose A Date Below</label>
             </div>
-          
+
             <div id="lunch-number" class="input-field">
                 <input name="entry.1866640669" id="number" type="number" class="validate" required>
                 <label for="number">Lunch Number</label>
