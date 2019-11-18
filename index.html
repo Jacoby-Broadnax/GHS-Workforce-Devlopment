@@ -45,13 +45,16 @@
 <div class="data-items">
     <span style="display:none">{{lunchNumber}}</span>
     <details style="border-radius: 5px;">
-        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" ><span>{{date}} </span>
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" >
+        
+            <span>{{date}} </span>
 
             <br>
                 <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
            <br> 
             <span>${{paid}}</span>
                 <br>
+                <h6 style="font-size: 12px;text-align: right;margin-top: -10px;">{{placeOfWork}} {{other}}</h6>
         </summary>
       <div class="divider"></div>
         {{productivity}}
@@ -154,23 +157,34 @@
                 <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
 
                     <div style="margin: auto;;">
-
-                        <div style="padding-top: 80px;" id="items"></div>
                         <div class="report">
-                            <button onclick="reportissue()" class="btn-flat waves-effect">Report An Issue</button>
+                            <button onclick="reportissue()" class="btn-flat waves-effect">Report An Error With Your Hours</button>
                         </div>
+                        <div style="padding-top: 80px;" id="items"></div>
+                       
                         <div class="report-sect vivify fadeIn" style="display: block;" id="report">
                             <form>
-                                <div class="input-field">
-                                    <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Time ID</label>
-                                </div>
-                                <i class="material-icons"
-                                    style="color: #012395;float: right;margin-top:-60px;margin-right: 10px;">help</i>
-                                <div class="input-field">
-                                    <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Lunch Number</label>
-                                </div>
+                              
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="number" type="number" class="validate" required>
+                <label for="number">Lunch Number</label>
+            </div>
+
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="timeid" type="text" class="validate" required>
+                <label for="timeid">Time ID</label>
+            </div>
+
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="email" type="email" class="validate" required>
+                <label for="email">School E-Mail</label>
+            </div>
+
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="fix" type="text" class="validate" required>
+                <label for="fix">Enter Your Issue</label>
+            </div>
+
                                 <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
                                         style="background-color: #012395 !important;"><i
                                             class="material-icons left">lock</i>Submit</button>

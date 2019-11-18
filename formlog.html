@@ -78,9 +78,12 @@
                     <option value="WGTV Broadcasting">WGTV Broadcasting</option>
                     <option value="Student Ambassador">Student Ambassador</option>
                     <option value="Culinary">Culinary</option>
-                    <option value="Other">Other</option>
+                    <option value="(Other) |">Other</option>
                 </select>
             </div>
+
+            <textarea type="hidden" class="post-input-left" id='foo' readonly="readonly" style="display: none;" title="Time ID (DO NOT EDIT)" 
+            ></textarea>
 
             <div class="input-field other">
                 <input autofocus name="entry.1830015961" id="name" type="text" class="validate">
@@ -98,8 +101,30 @@
                 });
             </script>
 
+<input>
 
-
+<script>function randNumber(len, an){
+    an = an&&an.toLowerCase();
+    var str="", i=0, min=an=="a"?10:0, max=an=="n"?10:62;
+    for(;i++<len;){
+      var r = Math.random()*(max-min)+min <<0;
+      str += String.fromCharCode(r+=r>9?r<36?55:61:48);
+    }
+    return str;
+  }
+  document.getElementById("foo").value = randNumber(10,'A');</script>
+  <script>function randNumber(len, an){
+    an = an&&an.toLowerCase();
+    var str="", i=0, min=an=="a"?10:0, max=an=="n"?10:62;
+    for(;i++<len;){
+      var r = Math.random()*(max-min)+min <<0;
+      str += String.fromCharCode(r+=r>9?r<36?55:61:48);
+    }
+    return str;
+  }
+  document.getElementById("foo2").value = randNumber(10,'A');
+  document.getElementById("foo3").value = randNumber(10,'A');</script>
+    </body>
 
 
             <div id="hours-worked" class="input-field">
@@ -155,6 +180,12 @@
                 <input name="entry.1866640669" id="number" type="number" class="validate" required>
                 <label for="number">Lunch Number</label>
             </div>
+            
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="number" type="number" class="validate" required>
+                <label for="number">Lunch Number</label>
+            </div>
+
             <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
                     style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
             </div>

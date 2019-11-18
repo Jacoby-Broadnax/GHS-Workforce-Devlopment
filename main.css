@@ -204,7 +204,11 @@ html {scroll-behavior: smooth;}
     display: block !important;
 }
 
-.report-sect {display: none;}
+.report-sect {display: none;position: sticky;top: 50px;}
+
+.report {position: sticky; top: 10px;background-color: white;z-index:150;}
+
+.report > button {background-color: white;}
 
 #myMenu {}
 
@@ -416,6 +420,7 @@ textarea.materialize-textarea.valid:focus,
 #items {
     margin: auto;
     width: 94%;
+    margin-top: 15px;
 }
 
 .data-items {
