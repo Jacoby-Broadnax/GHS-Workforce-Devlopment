@@ -455,4 +455,4 @@ summary:focus {
 
 .name-view {position: fixed;top: 50px; left: 0px;font-weight: 100;background-color: white; width: 100%;z-index: 30;   transform: rotateZ(180deg);height: 100%;padding-top: 40vh;}
 
-.name-view > h5 {color: black !important;font-size: 20px;text-align: center;}
+.name-view > h5 {color: black !important;font-size: 18px;text-align: center;background-color: white;}
