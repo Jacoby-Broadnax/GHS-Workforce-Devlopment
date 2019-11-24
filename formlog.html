@@ -78,18 +78,19 @@
                     <option value="WGTV Broadcasting">WGTV Broadcasting</option>
                     <option value="Student Ambassador">Student Ambassador</option>
                     <option value="Culinary">Culinary</option>
-                    <option value="(Other) |">Other</option>
+                    <option onclick="other()" value="(Other) |">Other</option>
                 </select>
             </div>
 
 
-            <div class="input-field other">
+            <div class="input-field other" >
                 <input autofocus name="entry.1830015961" id="other" type="text" class="validate">
                 <label for="other">Enter Your Place Of Work Below (If Not Listed Above)</label>
             </div>
             <script>
                 function other() {
-                    document.getElementsByClassName("other")[0].style.display = "block"
+                    document.getElementsByClassName("other")[0].style.display = "block";
+                    console.log("Other Input Loaded")
                 }
             </script>
             <script>
