@@ -5,7 +5,7 @@
     <title>GHS Workforce Development</title>
     <link rel="stylesheet" href="main.css">
     <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -29,9 +29,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON('https://api.sheety.co/d69fbd6d-08b6-4697-9a98-fc5bcb8116aa', function (data) {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/workforceDevelopment/data', function (data) {
                 var template = Handlebars.compile($('#item-template').html())
-                $('#items').html(template(data))
+                $('#items').html(template(data.data))
             })
         })
     </script>
