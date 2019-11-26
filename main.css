@@ -204,6 +204,8 @@ html {scroll-behavior: smooth;}
     display: block !important;
 }
 
+.search-input-container {margin: auto; width:90%;margin-top: 35vh;}
+
 .report-sect {display: none;position: sticky;top: 50px;}
 
 .report {position: sticky; top: 10px;z-index:150;}
