@@ -195,7 +195,7 @@ html {scroll-behavior: smooth;}
     ;
 }
 
-.offline {position: fixed; top: 200px;background-color: white; height: 100vh; z-index: 400;}
+.offline {position: fixed; top: 200px;background-color: white; height: 100vh; z-index: 400;width: 100%;;}
 
 .offline-text-container {margin: auto; width: 90%;;}
 
