@@ -195,7 +195,13 @@ html {scroll-behavior: smooth;}
     ;
 }
 
+.offline {position: fixed; top: 200px;background-color: white; height: 100vh; z-index: 400;}
 
+.offline-text-container {margin: auto; width: 90%;;}
+
+.offline-text-container > h5 {;}
+
+.offline-text-container > p {margin-top: -7px;}
 
 .confirm-button {display: none !important;;}
 
