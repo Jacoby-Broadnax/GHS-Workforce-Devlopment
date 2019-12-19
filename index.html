@@ -73,8 +73,17 @@
         </script>
 </head>
 
-<body class="vivify fadeIn delay-400">
-
+<body onload="loaded()"  class="vivify fadeIn delay-400">
+    <div class="iframe-loader" id="loader">
+        <div>
+            <img src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966">
+        </div>
+    </div>
+    <script>
+        function loaded(){
+              document.getElementById("loader").style.display="none";
+          }
+      </script>
 <div class="offline" style="display: none;">
     <div class="offline-text-container">
      <h5>Under Maintenance</h5>
@@ -171,7 +180,7 @@
                         <div class="report">
                             <button onclick="reportissue()" class="btn-flat waves-effect">Report An Error With Your Hours</button>
                         </div>
-                        <div style="padding-top: 80px;" id="items"></div>
+                        <div  style="padding-top: 80px;" id="items"></div>
                        
                         <div class="report-sect vivify fadeIn" style="display: none;" id="report">
                             <form>
@@ -235,8 +244,7 @@
                     width="100%" height="95%" frameborder="0">Loading…</iframe>
             </section>
         </div>
-
-
+       
 
 </body>
 
