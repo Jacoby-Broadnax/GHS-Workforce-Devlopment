@@ -367,6 +367,10 @@ input.focus[type=checkbox] {
 
 }
 
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
 .workforce-dev-loader>p {
     position: absolute;
     bottom: 0px;
@@ -436,14 +440,15 @@ textarea.materialize-textarea.valid:focus,
 }
 
 .data-items {
-    border: solid;
+    border-bottom: solid;
     border-color: lightgray;
     border-width: 1.3px;
-    border-radius: 5px;
+    
     padding: 5px;
     margin-top: 10px;
     color: black;
     transform: rotateZ(180deg);
+    margin-bottom: 10px;
 }
 
 .view-hours {
