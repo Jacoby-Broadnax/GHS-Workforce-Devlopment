@@ -308,6 +308,8 @@ input.focus[type=checkbox] {
     background-color: #012395;
 }
 
+.workid {float: right;font-size: 10px;margin-top: -70px;}
+
 .log-form-container {
     margin: auto;
     width: 94%;
