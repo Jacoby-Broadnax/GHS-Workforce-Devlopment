@@ -51,16 +51,21 @@
     <span style="display:none">{{lunchNumber}}</span>
     <details style="border-radius: 5px;">
         <summary style="width: 100%;border-radius: 5px;" class="waves-effect" >
-        
-            <span>{{date}} </span>
+            
+         
+            
 
-            <br>
+      
+           {{productivity}}
                 <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
            <br> 
+           <span>{{date}} </span>
+           <br>
             <span>${{paid}}</span>
                 <br>
                 <h6 style="font-size: 12px;text-align: right;margin-top: -10px;">{{placeOfWork}} {{other}}</h6>
                 <p class="workid">Log ID:{{id}}</p>
+              
         </summary>
       <div class="divider"></div>
        
@@ -154,7 +159,7 @@
                             autofocus class="search-input" type="number" id="mySearch" onkeydown="myFunction()"
                             placeholder="&emsp; Enter Lunch Number" title="Click To Search For Jobs" minlength="5"
                             required><button onclick="search()"
-                            class="btn-flat waves-effect confirm-button right vivify fadeInRight delay-2500"
+                            class="btn-flat waves-effect confirm-button right vivify fadeInRight delay-1250"
                             type="submit">Verify</button>
                     </div>
 
