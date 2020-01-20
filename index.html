@@ -44,9 +44,7 @@
         {{#each this}}
     <li>
         <a href="#view-hours" >
-            <div class="name-view vivify fadeOut delay-1750 duration-100"><h5 class="vivify fadeOut delay-1000 ">Welcome Back, {{name}}</h5> <div class="progress" style="background-color: lightgray;">
-                <div class="indeterminate black"></div>
-            </div></div>
+            <div class="name-view vivify fadeOut delay-1750 duration-100"><h5 class="vivify fadeOut delay-1000 ">Welcome Back, {{name}}</h5> </div>
 <div class="data-items vivify fadeIn delay-2000">
     <span style="display:none">{{lunchNumber}}</span>
     <details style="border-radius: 5px;">
@@ -63,7 +61,7 @@
                 <p class="workid">Log ID:{{id}}</p>
               
         </summary>
-      <div class="divider"></div>
+    
        
     </details>
 </div>
@@ -134,11 +132,11 @@
             </section>
 
             <div id="view-hours" class="view-hours">
-
-                <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
-                <a href="https://workforcedevelopment.netlify.com" class="waves-effect"><i class="material-icons refresh-btn"
-                        id="up">refresh</i></a>
-                <h6 class="section-header">View Hours</h6>
+<div class="view-container" id="up">  <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+    <a href="https://workforcedevelopment.netlify.com" class="waves-effect"><i class="material-icons refresh-btn"
+           >refresh</i></a>
+    <h6 class="section-header">View Hours</h6></div>
+              
                 <script>
                     $(window).scroll(function () {
                         var scroll = $(window).scrollTop();

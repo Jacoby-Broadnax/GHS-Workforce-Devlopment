@@ -118,7 +118,8 @@ html {scroll-behavior: smooth;}
     font-weight: bold;
     text-align: center;
     margin-top: -30px;
-    ;
+ 
+
 }
 
 .back-btn {
@@ -155,12 +156,7 @@ html {scroll-behavior: smooth;}
 }
 
 #up.scrolled {
-    padding: 10px;
-    background-color: white;
-    border: solid;
-    border-width: 1.3px;
-    border-color: lightgray;
-    margin-right: 6px;
+border-bottom: solid 1px lightgray;
 }
 
 #view-hours {
@@ -170,6 +166,8 @@ html {scroll-behavior: smooth;}
 #view-hours:target {
     display: block
 }
+
+.view-container {background-color: white;padding-bottom: 5px;position: fixed;width: 100%; z-index: 50;}
 
 #log-hours {
     display: none;
@@ -216,7 +214,7 @@ html {scroll-behavior: smooth;}
 
 .report-sect {display: none;position: sticky;top: 50px;}
 
-.report {position: sticky; top: 10px;z-index:150;}
+.report {margin-top: 44px;}
 
 .report > button {background-color: white;}
 
@@ -438,11 +436,11 @@ textarea.materialize-textarea.valid:focus,
 #items {
     margin: auto;
     width: 94%;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .data-items {
-    border-bottom: solid;
+ 
     border-color: lightgray;
     border-width: 1.3px;
     
@@ -451,6 +449,9 @@ textarea.materialize-textarea.valid:focus,
     color: black;
     transform: rotateZ(180deg);
     margin-bottom: 10px;
+ 
+    border-radius: 5px;
+    border: solid 1px lightgray;
 }
 
 .view-hours {
