@@ -520,6 +520,6 @@ summary:focus {
 @media (orientation: landscape) {
    .pop-close > button {display: none;}
    .menu-sub {bottom: 0px;}
-
+.profile-text-container > p {display: none;}
    .btn-exc {position: fixed; bottom: 20px; left: 0px; width: 100%;}
   }
