@@ -498,9 +498,9 @@ summary:focus {
 
 .menu-popup {position: fixed; top: 0px; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.555); left: 0px;z-index: 500;;}
 
-.menu-sub {position: fixed; bottom: 75px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
+.menu-sub {position: fixed; bottom: 0px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
 
-.menu-margin {margin: auto; width: 90%;}
+.menu-margin {margin: auto; width: 90%;overflow: scroll;}
 
 .pop-close> button {position: fixed; width: 100%;height: 35vh;border: none;background-color: transparent;}
 
@@ -517,3 +517,6 @@ summary:focus {
 .complete {display: block;}
 
 .remove {display: none;}
+@media (orientation: landscape) {
+   .pop-close > button {display: none;}
+  }
