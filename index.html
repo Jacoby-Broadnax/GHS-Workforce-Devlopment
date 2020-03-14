@@ -259,7 +259,7 @@
     </div>
     <form action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
     <div class="input-field">
-        <input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
+        <input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required>
         <label for="name">First & Last Name</label>
     </div>
     <div class="input-field col s12">
@@ -287,17 +287,18 @@
         </select>
     </div>
     <div class="input-field" >
-        <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" autofocus>
+        <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" >
         <label for="other" >Other Place Of Work (If Not Listed Above)</label>
     </div>
     <div id="lunch-number" class="input-field">
-        <input autofocus oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
+        <input oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
         <label for="ac-number">Lunch Number</label>
     </div>
-
-    <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+<div class="btn-exc">
+    <div class="form-btn-container "><button type="submit" class="btn blue darken-4"
             style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
     </div>
+</div>
 </form>
 </div>
 </div>
