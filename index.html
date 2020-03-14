@@ -70,19 +70,30 @@
             {{/each}}
         
         </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/workforceDevelopment/icons', function (data) {
+                    var template = Handlebars.compile($('#item-template2').html())
+                    $('#icons').html(template(data.icons))
+                })
+            })
+        </script>
+        <script id="item-template2" type="text/x-handlebars-template">
+         <div class="icon-container">
+            {{#each this}}
+
+            <a class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
+   <img loading ="lazy" src="Icons/{{icon}}.png">
+</a>
+
+                {{/each}}
+            </div>
+            </script>
 </head>
 
 <body onload="loaded()" >
-    <div class="iframe-loader" id="loader">
-        <div class="progress" style="background-color: lightgray;">
-            <div class="indeterminate black"></div>
-        </div>
-    </div>
-    <script>
-        function loaded(){
-              document.getElementById("loader").style.display="none";
-          }
-      </script>
+ 
 <div class="offline" style="display:none">
     <div class="offline-text-container">
      <h5 style="font-weight: 500;">Under Maintenance</h5>
@@ -116,17 +127,18 @@
                             Fill out important info once and log your hours quicker.
                                 </p>
                     </div>
-     <a href="#menu-pop"><button class="waves-effect">Get Started</button></a>
+     <a href="#menu-pop"><button class="waves-effect" style="margin-top: -60px;">Get Started</button></a>
              
                 </div>
                 <div onload="" id="profileWrap" class="jn">
                 <div  id="profileIndicator" class="profile-indicator">
+                    <img id="imgIcon" class="profile-icon" src="Icons/561411.png" onload="document.getElementById('imgIcon').src = localStorage.getItem('seticon')">
                     <div class="indicator-text">
                         <h3>Welcome Back</h3>
                         <p  id="namepara">null</p>
                     </div>
              <div class="create-profile">
-                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button style="margin-top: -38px;" class="waves-effect">Edit Profile</button></a>
+                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button class="waves-effect">Edit Profile</button></a>
              </div>
                 </div>
             </div>
@@ -286,6 +298,7 @@
             <option onclick="other()" value="(Other) |">Other</option>
         </select>
     </div>
+    <div id="icons"></div>
     <div class="input-field" >
         <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" autofocus>
         <label for="other" >Other Place Of Work (If Not Listed Above)</label>
