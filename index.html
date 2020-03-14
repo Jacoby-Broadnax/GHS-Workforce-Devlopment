@@ -85,7 +85,7 @@
       </script>
 <div class="offline" style="display:none">
     <div class="offline-text-container">
-     <h5>Under Maintenance</h5>
+     <h5 style="font-weight: 500;">Under Maintenance</h5>
      <p>We are so sorry for the inconvenience workforce development will be under maintenance until 9:45am today.</p>
     </div>
 </div>
@@ -100,15 +100,41 @@
         <div class="home-navigation">
             <div class="logo-position">
                 <div class="home-logo-container">
-                    <img src="Branding/Logo.svg">
+                    <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));" src="Branding/Logo.svg">
                 </div>
             </div>
+
+         
+
             <div id="navigation" class="navigation">
+
+                <div id="profileCreate" class="create-profile vivify fadeIn duration-500">
+                    <div class="profile-text-container">
+                        <h3>Set Up</h3>
+                        <h2>A Profile</h2>
+                        <p>
+                            Fill out important info once and log your hours quicker.
+                                </p>
+                    </div>
+     <a href="#menu-pop"><button class="waves-effect">Get Started</button></a>
+             
+                </div>
+                <div onload="" id="profileWrap" class="jn">
+                <div  id="profileIndicator" class="profile-indicator">
+                    <div class="indicator-text">
+                        <h3>Welcome Back</h3>
+                        <p  id="namepara">null</p>
+                    </div>
+             <div class="create-profile">
+                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button style="margin-top: -38px;" class="waves-effect">Edit Profile</button></a>
+             </div>
+                </div>
+            </div>
                 <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
                             src="assets/assignment_returned-24px.svg">Log Todays
                         Hours</button></a>
                 <a href="#view-hours">
-                    <button class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
+                    <button onclick="document.getElementById('mySearch').value = localStorage.getItem('number');"  class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
                         Hours</button></a>
                 <a href="#feedback">
                     <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Give
@@ -121,14 +147,14 @@
   }
           
                         </style>
-                        <a href="#popup"><button style="border: none;padding: 0px;margin-top: 0px;" onclick="document.getElementById('open-frame').src ='https://m.mscoastaljobs.com/internships'"><div  class="new waves-effect"><img src="assets/partnership.svg"></div></button></a> 
+                        <a href="#popup"><button style="border: none;padding: 0px;margin-top: 0px;" onclick="document.getElementById('open-frame').src ='https://m.mscoastaljobs.com/internships'"><div style="display:none"  class="new waves-effect"><img src="assets/partnership.svg"></div></button></a> 
             </div>
           <div class="iframe-open" id="popup"><a href="#"><i class="material-icons close-btn">close</i></a><iframe class="open-frame" id="open-frame" src=""></iframe></div>
             <section class="log-hours" id="log-hours">
                 <a href="https://workforcedevelopment.netlify.com/" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
 
                 <h6 class="section-header">Log Todays Hours</h6>
-                <iframe class="vivify fadeIn duration-500" src="https://workforcedevelopment.netlify.com/formlog.html"></iframe>
+                <iframe class="vivify fadeIn duration-500" src="formlog.html"></iframe>
             </section>
 
             <div id="view-hours" class="view-hours">
@@ -221,7 +247,62 @@
 
             </div>
 
-           
+           <div id="menu-pop" class="menu-popup" >
+               <a href="#" class="pop-close"><button class="waves-effect"></button></a>
+<div class="menu-sub vivify fadeInBottom duration-200">
+    <div class="menu-margin">
+    <div class="profile-text-container">
+        <h2 id="menuindi">Profile Set-up</h2>
+        <p>
+            Fill out important info once and log your hours quicker.
+                </p>
+    </div>
+    <form action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
+    <div class="input-field">
+        <input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
+        <label for="name">First & Last Name</label>
+    </div>
+    <div class="input-field col s12">
+        <select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379" required>
+            <option value="" disabled selected>Select A Business</option>
+            <option value="Harrison County Development Commission">Harrison County Development Commission
+            </option>
+            <option value="Port Of Gulfport">Port Of Gulfport</option>
+            <option value="DECA">DECA</option>
+            <option value="Gulfport School District Technology">Gulfport School District Technology</option>
+            <option value="Ingalls Ship Building">Ingalls Ship Building</option>
+            <option value="Federal Programs">Federal Programs</option>
+            <option value="Public Relations">Public Relations</option>
+            <option value="Team Fusion (Robotics)">Team Fusion (Robotics)</option>
+            <option value="Med Tech">Med Tech</option>
+            <option value="Teacher Academy">Teacher Academy</option>
+            <option value="Law & Public Safety">Law & Public Safety</option>
+            <option value="Digital Media">Digital Media</option>
+            <option value="WGTV Broadcasting">WGTV Broadcasting</option>
+            <option value="Student Ambassador">Student Ambassador</option>
+            <option value="Culinary">Culinary</option>
+            <option value="Student Worker">Student Worker</option>
+            <option value="Community Service">Community Service</option>
+            <option onclick="other()" value="(Other) |">Other</option>
+        </select>
+    </div>
+    <div class="input-field" >
+        <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" autofocus>
+        <label for="other" >Other Place Of Work (If Not Listed Above)</label>
+    </div>
+    <div id="lunch-number" class="input-field">
+        <input autofocus oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
+        <label for="ac-number">Lunch Number</label>
+    </div>
+
+    <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+            style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
+    </div>
+</form>
+</div>
+</div>
+           </div>
+
             <section id="feedback">
                 <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
 

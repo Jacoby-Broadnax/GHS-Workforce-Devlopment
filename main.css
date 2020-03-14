@@ -57,14 +57,14 @@ html {scroll-behavior: smooth;}
     border-top: solid;
     border-color: lightgray;
     border-width: 1px;
-    border-bottom: solid;
+ 
     padding-bottom: 25px;
     border-bottom-width: 1px;
     border-bottom-color: lightgray;
 }
 
 .home-navigation {
-    margin-top: 10vh
+    margin-top: 20vh
 }
 
 .navigation>a>button {
@@ -431,7 +431,7 @@ textarea.materialize-textarea.valid:focus,
 
 /*--------------------------------------User Verification------------------------------------*/
 
-
+.input-field >input:focus {position: relative;z-index: 1000;}
 
 #items {
     margin: auto;
@@ -486,3 +486,34 @@ summary:focus {
   
     .iframe-loader > div > img {width: 100%;}
   
+/*--------------------------------------Profile-----------------------------------------*/
+
+.profile-text-container > h3 {font-size: 15px;padding-bottom: 0px;margin-bottom: 0px;margin-top: 10px;}
+
+.profile-text-container > h2 {font-size: 25px;font-weight: 500;padding-top: 0px;margin-top: 0px;margin-bottom: 0px;}
+
+.profile-text-container >p {margin-top: 0px;font-size: 13.5px;margin-bottom: 0px;}
+
+.create-profile > a > button {position: absolute; right: 10px;margin-top: -60px;width: 110px;height: 35px;border-radius: 7px;border-radius: 5px;border: solid 1px lightgray;background-color: rgb(255, 255, 255);}
+
+.menu-popup {position: fixed; top: 0px; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.555); left: 0px;z-index: 500;;}
+
+.menu-sub {position: fixed; bottom: 0px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
+
+.menu-margin {margin: auto; width: 90%;}
+
+.pop-close> button {position: fixed; width: 100%;height: 50vh;border: none;background-color: transparent;}
+
+#menu-pop {display: none;}
+
+#menu-pop:target {display: block;}
+
+.indicator-text > h3 {font-size: 14px;padding-top: 0px;margin-bottom: 0px;margin-top: 7px;}
+
+.indicator-text > p {font-size: 14px;font-weight: 500;margin-top: 5px;margin-bottom: 0px;}
+
+.jn {display: none;}
+
+.complete {display: block;}
+
+.remove {display: none;}
