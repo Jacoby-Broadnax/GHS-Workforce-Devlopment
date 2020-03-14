@@ -519,7 +519,8 @@ summary:focus {
 .remove {display: none;}
 @media (orientation: landscape) {
    .pop-close > button {display: none;}
-   .menu-sub {bottom: 20px;}
+   .menu-sub {top: 0px;height: 100vh;padding-top: 0px;}
 .profile-text-container > p {display: none;}
+.profile-text-container > h2 {display: none;}
    .btn-exc {position: fixed; bottom: 20px; left: 0px; width: 100%;}
   }
