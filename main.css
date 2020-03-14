@@ -519,4 +519,5 @@ summary:focus {
 .remove {display: none;}
 @media (orientation: landscape) {
    .pop-close > button {display: none;}
+   .menu-sub {bottom: 0px;}
   }
