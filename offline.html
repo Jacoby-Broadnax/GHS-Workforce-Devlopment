@@ -3,7 +3,7 @@
 
 <head>
     <meta name="robots" content="noindex" />
-    <title>SEA Force | Workforce Development</title>
+    <title>GHS Workforce Development</title>
     <link rel="stylesheet" href="main.css">
     <script src="script.js"></script>
     <link rel="shortcut icon" href="/Branding/512px logo.png">
@@ -102,7 +102,7 @@
             {{#each this}}
             <input required name="icons" id="{{icon}}" type="radio" class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');localStorage.setItem('icon', '{{icon}}');">
 
-      
+        </input>
         <label for="{{icon}}" class="icons">
             <img  loading ="lazy" src="Icons/{{icon}}.png">
         </label>
@@ -134,7 +134,7 @@
         <div class="home-navigation">
             <div class="logo-position">
                 <div class="home-logo-container">
-                    <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));" src="Assets/sea force logo.svg">
+                    <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));" src="Branding/Logo.svg">
                 </div>
             </div>
 

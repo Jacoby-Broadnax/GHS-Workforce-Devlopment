@@ -21,8 +21,8 @@ html {scroll-behavior: smooth;}
 
 .home-logo-container {
     margin: auto;
-    width: 260px;
-    background-clip: ;
+    width: fit-content;
+margin-bottom: 6px;
 }
 
 .divider {height: 1px; background-color: white;}
@@ -37,7 +37,7 @@ html {scroll-behavior: smooth;}
 }
 
 .home-logo-container>img {
-    width: 260px;
+    width: 145px
 }
 
 .iframe-open > iframe {width: 100%;position: fixed; left: 0px ;top: 0px;;height: 100%;;z-index: 150;border: none;background-color: lightgray;;}
@@ -570,6 +570,6 @@ summary:focus {
 .view-container {position: static;}
 .menu-sub {width: auto;animation: none !important;width: 700px;position: static;}
 .pop-close {display: none !important;}
-.refresh-btn
+.refresh-btn{}
 
   }
